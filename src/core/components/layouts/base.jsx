@@ -36,7 +36,7 @@ export default class BaseLayout extends React.Component {
     const loadingStatus = specSelectors.loadingStatus()
 
     let loadingMessage = null
-  
+
     if(loadingStatus === "loading") {
       loadingMessage = <div className="info">
         <div className="loading-container">
@@ -88,6 +88,27 @@ export default class BaseLayout extends React.Component {
 
       <div className='swagger-ui'>
           <SvgAssets />
+          <div style={{
+          background: 'rgb(51,51,51)'
+        }}>
+          <img src="https://www.commonapp.org/static/common-app-logo-new-5d3f75369f7d1deb776c879c94c37097.svg" style={{
+            marginLeft: "3.5em",
+            position: "relative",
+            bottom: "0px"
+          }} />
+
+          <div style={{
+            background: 'rgb(51,51,51)',
+            display: 'inline-block'
+          }}>
+            {/* <span style={{
+              color: 'white',
+              marginLeft: "8em",
+              bottom: '29px',
+              position: 'relative'
+            }}>API documentation</span> */}
+          </div>
+        </div>
           <VersionPragmaFilter isSwagger2={isSwagger2} isOAS3={isOAS3} alsoShow={<Errors/>}>
             <Errors/>
             <Row className="information-container">
